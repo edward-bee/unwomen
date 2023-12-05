@@ -1,0 +1,235 @@
+<div class="bg-image font-roboto fw-bold">
+  <h3></h3>
+  <c-container>
+    <c-row class="justify-content-center rounded">
+      <div class="py-5 h-80">
+        <div class="row d-flex justify-content-center align-items-center reg-form-wrap">
+          <div class="col col-xl-12 d-flex justify-content-center align-items-center">
+            <div class="card" style="border-radius: 1rem">
+              <div class="row g-0">
+                <form (ngSubmit)="onSubmit()" class="rounded my-3 p-4" #userForm="ngForm">
+                  <div class="d-flex align-items-center mb-2 pb-1">
+
+                    <span class="h1 fw-bold mb-0"><img src="../../../../assets/img//brand/un-women-logo.png"
+                        alt="Register" class="img-fluid form-logo" style="border-radius: 1rem 0 0 1rem" /></span>
+                  </div>
+                  <h1 class="form-title">Register</h1>
+                  <h2 class="form-subtitle font-weight-bold text-center">
+                    Create An Account With Us Today For Free
+                  </h2>
+                  <div class="text-center">
+                    <p class="text-sm">NOTE: All Fields Mark with <span class="error-message">**</span> are required <span class="error-message">and all images should be less than 5mb</span></p>
+                  </div>
+                   <div class="row">
+                    <div class="col-md-12 mb-4 relative d-flex justify-content-center align-items-center">
+                      <div class="pp-wrapper cursor-pointer" (click)="fileInput.click()">
+                        <img [src]="imgSrc" alt="">
+                        <div class="overlay text-center txt-sec mt-2">
+                          <h5>
+                            Choose Image
+                          </h5>
+                        </div>
+                      </div>
+
+                      <div class="form-outline" style="display: none;">
+                        <input type="file" id="file" name="file" (change)="onFileSelected($event)"
+                        accept=".jpg, .jpeg, .png" required class="form-control form-control-lg" #fileInput />
+                        <label class="form-label" for="profileimage">Profile Image <span
+                            style="color: red">**</span></label>
+                      </div>
+                    </div>
+                   </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-2">
+                      <div class="form-outline">
+                        <label class="form-label" for="firstName">Full Name <span style="color: red">**</span></label>
+
+                        <input type="text" id="name" name="name" [(ngModel)]="user.name" required
+                          class="form-control form-control-lg " #nameField="ngModel" />
+                        <!-- Error message -->
+                        <div *ngIf="
+                            nameField.invalid &&
+                            (nameField.dirty || nameField.touched)
+                          " class="alert alert-danger">
+                          Full Name is required
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                      <div class="form-outline">
+                        <label class="form-label" for="Email">Email <span style="color: red">**</span></label>
+
+                        <input type="email" id="email" name="email" [(ngModel)]="user.email" required
+                          class="form-control form-control-lg " #emailField="ngModel" />
+                        <div *ngIf="
+                            emailField.invalid &&
+                            (emailField.dirty || emailField.touched)
+                          " class="alert alert-danger">
+                          Email is required
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-2 d-flex align-items-center">
+                      <div class="form-outline datepicker w-100 relative" style="position: relative;">
+                        <i class="fa fa-caret-down" style="
+                          font-size: 16px;
+                          position: absolute;
+                          bottom: 20%;
+                          right: 10px;
+                        "></i>
+                        <label for="role" class="form-label">Sign in As <span style="color: red">**</span></label>
+
+                        <select class="form-select form-select-lg " aria-label=".form-select-lg example"
+                          id="role" name="role" [(ngModel)]="user.role" required #roleField="ngModel">
+                          <option selected>Sign In As</option>
+                          <option value="Customer">Customer</option>
+                          <option value="Vendor">Vendor</option>
+                          <option value="Mentor">Mentor</option>
+                          
+                        </select>
+
+                        <div *ngIf="
+                            roleField.invalid &&
+                            (roleField.dirty || roleField.touched)
+                          " class="alert alert-danger">
+                          Role is required
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-2 d-flex align-items-center">
+                      <div class="form-outline datepicker w-100">
+                        <label for="phoneno" class="form-label">Phone No <span style="color: red">**</span></label>
+
+                        <input type="tel" id="phoneNo" name="phoneNo" [(ngModel)]="user.phoneNo" required
+                          class="form-control form-control-lg " #phoneNoField="ngModel" />
+                        <div *ngIf="
+                            phoneNoField.invalid &&
+                            (phoneNoField.dirty || phoneNoField.touched)
+                          " class="alert alert-danger">
+                          Phone Number is required
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-md-6 mb-2 pb-2">
+                      <div class="form-outline">
+                        <label class="form-label" for="password">Password <span style="color: red">**</span></label>
+
+                        <input type="password" id="password" name="password" [(ngModel)]="user.password" required
+                          [attr.minlength]="8" [pattern]="'^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])'"
+                          class="form-control form-control-lg " #passwordField="ngModel" />
+                        <div *ngIf="passwordField.invalid && (passwordField.dirty || passwordField.touched)">
+                          <div
+                            [ngClass]="{'error-message': !isPasswordValid(passwordField), 'success-message': isPasswordValid(passwordField)}">
+                            <div *ngIf="hasError(passwordField, 'required')">Password is required.</div>
+                            <div *ngIf="hasError(passwordField, 'minlength')">Password must be at least 8 characters
+                              long.</div>
+                            <div *ngIf="hasError(passwordField, 'pattern')">
+                              Password must contain at least one lowercase letter, one uppercase letter, one digit, and
+                              one special character.
+                            </div>
+                          </div>
+                        </div>
+
+
+
+                      </div>
+                    </div>
+
+
+
+
+                    <div class="col-md-6 mb-2 pb-2">
+                      <div class="form-outline">
+                        <label class="form-label" for="confPassword">Confirm Password <span
+                          style="color: red">**</span></label>
+                        <input type="password" id="confPassword" name="confPassword" [(ngModel)]="user.confPassword"
+                          required [attr.minlength]="8"
+                          [pattern]="'^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])'"
+                          class="form-control form-control-lg " #confPasswordField="ngModel" />
+             
+                        <div
+                          *ngIf="confPasswordField.invalid && (confPasswordField.dirty || confPasswordField.touched)">
+                          <div *ngIf="hasError(confPasswordField, 'required')">Confirm Password is required.</div>
+                          <div *ngIf="hasError(confPasswordField, 'minlength')">Confirm Password must be at least 8
+                            characters
+                            long.
+                          </div>
+                          <div *ngIf="hasError(confPasswordField, 'pattern')">
+                            Password must contain at least one lowercase letter, one uppercase letter, one digit, and
+                            one special character.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-2 pb-2">
+                      <div class="form-outline">
+                        <label class="form-label" for="address">Home Address <span style="color: red">**</span></label>
+                        <input type="text" id="homeAddress" name="homeAddress" [(ngModel)]="user.homeAddress" required
+                          class="form-control form-control-lg " #homeAddressField="ngModel" />
+                    
+                        <div *ngIf="
+                            homeAddressField.invalid &&
+                            (homeAddressField.dirty || homeAddressField.touched)
+                          " class="alert alert-danger">
+                          Address is required
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-2 pb-2">
+                      <div class="form-outline datepicker w-100 " style="position: relative">
+                        <i class="fa fa-caret-down" style="font-size: 16px; position: absolute; bottom: 20%; right: 10px;"></i>
+                        <label for="country" class="form-label">Country <span style="color: red">**</span></label>
+                      
+                            <select class="form-select form-select-lg" id="country" name="country" [(ngModel)]="user.country" required #countryField="ngModel">
+                              <option value="" selected>Select Country</option>
+                              <option *ngFor="let country of countries" [value]="country.name">{{ country.name }}</option>
+                            </select>
+                      
+                        <div *ngIf="countryField.invalid && (countryField.dirty || countryField.touched)" class="alert alert-danger">
+                          Country is required
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+
+                  <!-- [disabled]="userForm.invalid" -->
+
+                  <div class="mt-4 pt-2">
+                    <div class="d-grid gap-2">
+                      <button class="btn form-submit-btn btn-lg" type="submit">
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-4">
+            <a href="/login" class="txt-primary">Already have an Account?</a>
+            <br />
+            <a href="/home" class="txt-sec"><i class="fa fa-long-arrow-left"></i> Back to Home</a>
+          </div>
+        </div>
+      </div>
+    </c-row>
+  </c-container>
+</div>
+
+
+
+<!-- Footer  -->
+<app-footer> </app-footer>

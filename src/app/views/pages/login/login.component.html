@@ -1,0 +1,120 @@
+<!-- TODO Modal start here -->
+<ng-template #content let-c="close" let-d="dismiss" class="bg-light dark:bg-transparent">
+  <div class="modal-header bg-info ">
+    <h4 class="modal-title font-roboto fw-bold text-white" id="modal-basic-title">Enter Your Email Address</h4>
+    <button type="button" class="btn-close text-white " aria-label="Close" (click)="d('Cross click')"></button>
+  </div>
+
+  <div class="modal-body">
+    <app-forget-password> </app-forget-password>
+
+  </div>
+
+</ng-template>
+
+
+
+<div class="bg-image font-roboto fw-bold">
+  <c-container>
+    <c-row class="justify-content-center rounded">
+
+      <div class="py-5 h-80">
+        <div class="row d-flex justify-content-center align-items-center login-form-wrap">
+          <div class="col col-xl-12 d-flex justify-content-center align-items-center">
+            <div class="card " style="border-radius: 1rem">
+              <div class="">
+                <div class="d-flex align-items-center ">
+                  <div class="card-body p-4 p-lg-4 text-black">
+                    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+                      <div class="d-flex align-items-center mb-2 pb-1">
+
+                        <span class="h1 fw-bold mb-0"><img src="../../../../assets/img//brand/un-women-logo.png"
+                            alt="login form" class="img-fluid form-logo" style="border-radius: 1rem 0 0 1rem" /></span>
+                      </div>
+                      <h1 class="form-title">Sign In</h1>
+                      <h5 class="form-subtitle fw-normal mb-2 pb-3" style="letter-spacing: 1px">
+                        Sign into your account
+                      </h5>
+                      <div class="error-message text-danger text-center" *ngIf="errorMessage">
+                        <h4>{{ errorMessage }}</h4>
+                      </div>
+                      <div class="form-outline mb-2">
+                        
+                        <label class="form-label" for="form2Example17">Email address <span
+                          style="color: red">**</span></label>
+                        <input type="email" placeholder="example@gmail.com" id="email" name="email"
+                          class="form-control form-control-lg " [(ngModel)]="email" required
+                          [ngModelOptions]="{ standalone: true }" #emailField="ngModel" />
+
+                        <div *ngIf="
+                          emailField.invalid &&
+                          (emailField.dirty || emailField.touched)
+                        " class="alert alert-danger">
+                          Email is required
+                        </div>
+
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="password">Password <span style="color: red">**</span></label>
+                        <input class="form-control form-control-lg " type="password" placeholder="********"
+                          id="password" name="password" [(ngModel)]="password" required
+                          [ngModelOptions]="{ standalone: true }" #passwordField="ngModel" />
+                        <div *ngIf="
+                          passwordField.invalid &&
+                          (passwordField.dirty || passwordField.touched)
+                        " class="alert alert-danger">
+                          Password is required
+                        </div>
+
+                      </div>
+
+                      <div class="d-grid pt-1 mb-4 ">
+                        <button class="btn btn-lg  position-relative form-submit-btn"
+                          style="" type="submit">
+                          Login
+                          <div class="spinner-border text-info" role="status" *ngIf="isLoading">
+                            <span class="visually-hidden">Loading...</span>
+                          </div>
+                        </button>
+                      </div>
+                      <div class="verification-message text-center" *ngIf="isLoading">Verifying your login</div>
+                     <div class="txt-center">
+                        <a class="small text-muted" href="forget-passsword"><c-col [md]="12">
+                          <button class="btn  mb-2 me-2  font-roboto txt-center txt-primary"
+                            (click)="openXl(content)">Forget Password</button>
+                            
+                        </c-col></a>
+                        
+                    
+                          <br />
+
+                        <a href="#!" class="small text-muted txt-sec">Terms of use.</a><br />
+                        <a href="#!" class="small text-muted txt-sec mb-2">Privacy policy</a>
+                     </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="txt-center mt-4">
+            <p class="pb-lg-2">
+              Don't have an account?
+              <a href="/register" class="txt-primary txt-center">Register here</a>
+            </p>
+  
+            <p class="pb-lg-2">
+              <a href="/home" class="txt-sec"><i class="fa fa-long-arrow-left"></i> Back to Home</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </c-row>
+  </c-container>
+</div>
+
+
+<!-- Footer  -->
+<app-footer> </app-footer>

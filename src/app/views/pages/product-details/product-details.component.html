@@ -1,0 +1,156 @@
+<app-navbar> </app-navbar>
+
+<div class="bg-light d-flex flex-column align-items-center " style="margin-top: 4.5rem;">
+  <c-container>
+    <c-row class="justify-content-center">
+      <c-col class="custom-col-xxl-16" md="10" sm="12">
+        <c-card-group class="shadow-0 border-0">
+          <c-card class="p-4 border-0"></c-card>
+        </c-card-group>
+      </c-col>
+    </c-row>
+  </c-container>
+</div>
+
+<div class="container-fluid pb-5 font-roboto">
+  <div class="row ">
+    <div class="col-lg-7 col-sm-12 mb-10">
+      <div id="product-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner bg-light">
+          <div *ngFor="let image of productDetails?.ProductImages; let i = index">
+            <ng-container *ngFor="let propName of ['productImageOne', 'productImageTwo', 'productImageThree', 'productImageFour', 'productImageFive', 'productImageSix']; let j = index">
+              <div class="carousel-item" [class.active]="j === activeImageIndex" *ngIf="image?.[propName]">
+                <img class="w-100" [src]="image[propName]" alt="Image" />
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+      
+  <!-- product images -->
+<div class="product-images mt-4">
+  <div *ngFor="let image of productDetails?.ProductImages; let i = index" class="flex justify-content-between">
+    <div class="p-img" *ngFor="let propName of ['productImageOne', 'productImageTwo', 'productImageThree', 'productImageFour', 'productImageFive', 'productImageSix']; let j = index" [class.active]="i === 0 && j === activeImageIndex" (click)="setActiveImage(j)">
+      <img class="w-100" [src]="image[propName]" alt="Image" *ngIf="image?.[propName]" />
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+
+    <div class="col-lg-5 col-sm-12 px-lg-4 h-auto mb-30 product-details-1">
+      <div class="h-100 bg-light p-10">
+        <h3 class="product-title">{{ productDetails?.productName }}</h3>
+
+        <div class="d-flex mb-3">
+          <div class="text-primary mr-2">
+            <small class="fas fa-star"></small>
+            <small class="fas fa-star"></small>
+            <small class="fas fa-star"></small>
+            <small class="fas fa-star-half-alt"></small>
+            <small class="far fa-star"></small>
+          </div>
+          <small class="pt-1">({{ productDetails?.rating }} Reviews)</small>
+        </div>
+        <h3 class="font-weight-semi-bold mb-4 product-price">
+          Nle  <span class="txt-primary">
+                {{ productDetails?.currentPrice }}
+              </span>
+        </h3>
+
+        <!-- TODO Some Details  -->
+
+        <div class="flex justify-content-start p-actions-1">
+          <div class="mr-4">
+            <button class="btn btn-primary">Buy this Product</button>
+          </div>
+          <div class="mr-4">
+            <button class="btn btn-sec-o">Add to Cart <span><i class="fa fa-shopping-basket"></i></span></button>
+          </div>
+        </div>
+        <div class="flex justify-content-start mt-8 p-actions-2">
+          <div class="mr-2">
+            <button class="text-green">
+              <i class="fa fa-whatsapp"></i>
+              Chat
+            </button>
+          </div>
+
+          <div class="mr-2">
+            <button>
+              <i class="fa fa-heart-o"></i>
+              Add to wishlist
+            </button>
+          </div>
+
+          <div class="mr-2 txt-primary">
+            <button>
+              <i class="fa fa-share"></i>
+              Share
+            </button>
+          </div>
+        </div>
+
+        <!-- product owner -->
+        <div class="row owner-info">
+          <div class="col col-lg-12 col-sm-12">
+            <div class="owner-info-card">
+              <div class="flex justify-content-between top">
+                <div class="flex-item">
+                  <div class="seller">
+                    <a href="#" class="d-inline d-flex flex-row align-items-center">
+                        <img src="http://via.placeholder.com/30" class="img-fluid rounded-circle">
+                        <p class="m-0 p-0 ml-2 text-dark">{{productDetails.CreatedBy}}
+                        </p>
+                    </a>
+                </div>
+                </div>
+                <div class="flex-item">
+                  <button class="btn btn-o mr-4">Follow</button>
+                  <button class="btn btn-o">Visit Store</button>
+                </div>
+              </div>
+
+              <div class="flex justify-content-between mt-4" >
+                <div class="">
+                  <i class="fa fa-map-marker"></i>
+                  Store Location: <span class="txt-primary">Freetown</span>
+                </div>
+                <div class="">
+                  <button class="text-green">
+                    <i class="fa fa-whatsapp"></i>
+                    Chat
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="p-4">
+      <div class="mb-2">
+        <h2 class="product-title">Description</h2>
+        <p class="product-desc text-dark">
+          {{ productDetails?.discription }}
+        </p>
+      </div>
+
+      <div class="mt-4">
+        <h3 class="product-title">Product Details</h3>
+        <p class="product-desc text-dark">
+         <!-- product other details -->
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Footer  -->
+<app-footer> </app-footer>

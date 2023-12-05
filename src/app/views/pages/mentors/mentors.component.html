@@ -1,0 +1,41 @@
+<!-- Navbar  -->
+<app-navbar> </app-navbar>
+
+<div class="bg-light d-flex flex-column align-items-center mt-5">
+    <c-container>
+        <c-row class="justify-content-center">
+            <c-col class="custom-col-xxl-16" md="10" sm="12">
+                <c-card-group class="shadow-0 border-0">
+                    <c-card class="p-4 border-0"></c-card>
+                </c-card-group>
+            </c-col>
+        </c-row>
+    </c-container>
+</div>
+
+<div class="container-fluid pt-5 p-3 shadow-lg font-roboto fw-bold mx-xl-5 px-xl-5">
+    <h2 class="section-title position-relative mb-2">
+        <span class="">Mentors</span>
+    </h2>
+    <p class="text-dark mb-4 sec-sub-title">
+        Explore our list of mentors and find the best fit for your needs.
+    </p>
+    <div class="row ">
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1" *ngFor="let mentor of Data">
+            <div class="mentor-item bg-light mb-4">
+                <div class="mentor-img overflow-hidden">
+                    <a class="text-decoration-none" [routerLink]="['/mentors-details', mentor.uuid]">
+                        <img class="" [src]="mentor.user.url" alt="" />
+                    </a>
+                </div>
+                <div class="mentor-details">
+                    <p class="h5 text-decoration-none">{{ mentor.user.name }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer  -->
+<app-footer> </app-footer>

@@ -1,0 +1,165 @@
+<div *ngIf="showSuccessMessage" class="success-message font-roboto fw-bold">
+  Product created successfully!
+</div>
+
+<c-row class="justify-content-center">
+  <c-col xs="12" sm="10" md="2" lg="12">
+
+    <div class="mx-5 font-roboto fw-bold">
+      <form [formGroup]="productForm" (ngSubmit)="onSubmit()" class="my-5 row g-3">
+        <h3>NOTE: All Fields Mark with <span style="color: red">**</span> are required <span style="color: red">and all
+            images should be less than 5mb</span> </h3>
+
+        <c-col [md]="6">
+          <div class="form-group">
+            <label for="productName">Product Name <span style="color: red">**</span>
+            </label>
+            <input type="text" id="productName" formControlName="productName" required formControlName="productName"
+              class="form-control form-control-lg shadow-lg" />
+          </div>
+        </c-col>
+
+        <c-col [md]="6">
+          <div class="form-group">
+            <label for="category">Category <span style="color: red">**</span></label>
+            <select id="category" formControlName="category" required class="form-control form-control-lg shadow-lg">
+              <option value="Beauity">Beauty and Wellness (Nails, Makeup, Wigs, Nail Polish, etc)</option>
+              <option value="Electronic">Electronics (Phones, Laptops, Chargers, TV, Cords, etc)</option>
+              <option value="Apparel">Apparel and Accessories (Clothes, Jewelry, Shoes, etc)</option>
+
+              <option value="Food">Foods and Drinks (Fruits, Vegetables, legumes, Soft Drinks, Wine, Fish, etc)</option>
+              <option value="Household">Household Provisions (Pepper, Sugar, Salt, Spices etc)</option>
+              <option value="Stationary">Stationary Supplies (Pens, Pencils, Books, Pencil Cases etc)</option>
+              <option value="Services">Services (Consulation, Tutoring etc)</option>
+              <option value="Others">Others</option>
+            </select>
+          </div>
+        </c-col>
+
+        <c-col [md]="6">
+          <div class="form-group">
+            <label for="discription">Description <span style="color: red">**</span></label>
+            <textarea id="discription" name="discription" formControlName="discription"
+              class="form-control form-control-lg shadow-lg"></textarea>
+          </div>
+        </c-col>
+
+        <c-col [md]="6">
+          <div class="form-group">
+            <label for="previousPrice">Previous Price <span style="color: red">**</span></label>
+            <input type="number" id="previousPrice" name="previousPrice" formControlName="previousPrice"
+              class="form-control form-control-lg shadow-lg" />
+          </div>
+        </c-col>
+
+        <c-col [md]="6">
+          <div class="form-group">
+            <label for="currentPrice">Current Price <span style="color: red">**</span></label>
+            <input type="number" id="currentPrice" name="currentPrice" formControlName="currentPrice"
+              class="form-control form-control-lg shadow-lg" />
+          </div>
+        </c-col>
+
+        <c-col [md]="6">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="productImageOne" class="pl-2">Product Image <span style="color: red">**</span></label>
+              <div class="col-md-12 mb-4 pb-2">
+                <div class="form-outline">
+                  <input type="file" id="productImageOne" (change)="onFileSelected($event, 'productImageOne')"
+                    accept="image/*" accept=".jpg, .jpeg, .png, ico, gif, svg" required
+                    class="form-control form-control-lg shadow-lg" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </c-col>
+
+
+        <c-col [md]="6">
+          <div class="form-group">
+            <label for="productImageTwo" class="pl-2">Product Image <span style="color: red">**</span></label>
+            <div class="col-md-12 mb-4 pb-2">
+              <div class="form-outline">
+                <input type="file" id="productImageTwo" (change)="onFileSelected($event, 'productImageTwo')"
+                  accept="image/*" accept=".jpg, .jpeg, .png, ico, gif, svg" required
+                  class="form-control form-control-lg shadow-lg" />
+              </div>
+            </div>
+          </div>
+        </c-col>
+
+
+        <c-col [md]="6">
+          <div class="form-group">
+            <label for="productImageThree" class="pl-2">Product Image</label>
+            <div class="col-md-12 mb-4 pb-2">
+              <div class="form-outline">
+                <input type="file" id="productImageThree" (change)="onFileSelected($event, 'productImageThree')"
+                  accept="image/*" accept=".jpg, .jpeg, .png, ico, gif, svg" required
+                  class="form-control form-control-lg shadow-lg" />
+              </div>
+            </div>
+          </div>
+        </c-col>
+
+
+        <c-col [md]="6">
+          <div class="form-group">
+            <label for="productImageFour" class="pl-2">Product Image</label>
+            <div class="col-md-12 mb-4 pb-2">
+              <div class="form-outline">
+                <input type="file" id="productImageFour" (change)="onFileSelected($event, 'productImageFour')"
+                  accept="image/*" accept=".jpg, .jpeg, .png, ico, gif, svg" required
+                  class="form-control form-control-lg shadow-lg" />
+              </div>
+            </div>
+          </div>
+        </c-col>
+
+        <c-col [md]="6">
+          <div class="form-group">
+            <label for="productImageFive" class="pl-2">Product Image</label>
+            <div class="col-md-12 mb-4 pb-2">
+              <div class="form-outline">
+                <input type="file" id="productImageFive" (change)="onFileSelected($event, 'productImageFive')"
+                  accept="image/*" accept=".jpg, .jpeg, .png, ico, gif, svg" required
+                  class="form-control form-control-lg shadow-lg" />
+              </div>
+            </div>
+          </div>
+        </c-col>
+
+
+        <c-col [md]="6">
+          <div class="form-group">
+            <label for="productImageSix" class="pl-2">Image</label>
+            <div class="col-md-12 mb-4 pb-2">
+              <div class="form-outline">
+                <input type="file" id="productImageSix" (change)="onFileSelected($event, 'productImageSix')"
+                  accept="image/*" accept=".jpg, .jpeg, .png, ico, gif, svg" required
+                  class="form-control form-control-lg shadow-lg" />
+              </div>
+            </div>
+          </div>
+        </c-col>
+
+        <c-col [md]="6">
+          <div class="mt-3 pt-2">
+
+            <button class="btn btn-primary form-control btn-lg" type="submit" (click)="onSubmit()"
+              [disabled]="isLoading">
+              Create Product
+              <div class="spinner-border text-warning" role="status" *ngIf="isLoading">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+              <span *ngIf="isLoading" class="text-danger">{{ loadingMessage }}</span>
+            </button>
+          </div>
+
+        </c-col>
+
+      </form>
+    </div>
+  </c-col>
+</c-row>

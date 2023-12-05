@@ -1,0 +1,20 @@
+// Place for temp fixes
+
+.form-floating > .form-select {
+  padding-top: 1.625rem !important;
+  padding-bottom: 0.625rem !important;
+}
+
+// temp fix for scrollbar styling (wip)
+@import "scrollbar";
+
+// temp fix .chartjs-tooltip-body-item padding
+@import "charts";
+body,
+.navbar,
+.btn,
+.form-control,
+.table,
+.alert {
+  font-family: 'Hedvig Letters Sans', sans-serif;
+}

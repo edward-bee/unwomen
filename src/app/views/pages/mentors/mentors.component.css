@@ -1,0 +1,30 @@
+.sec-sub-title{
+    font-weight: 400;
+}
+
+.mentor-item{
+    height: 330px;
+    position: relative;
+    border-radius: 12px;
+    border:5px solid #FFD333;
+}
+
+.mentor-img img{
+    height: 320px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.mentor-details{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: auto;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    color: #fff;
+    padding: 10px;
+    border-radius: 0 0 12px 12px;
+
+}

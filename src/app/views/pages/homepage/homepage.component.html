@@ -1,0 +1,238 @@
+<app-navbar> </app-navbar>
+
+
+<div class="bg-light d-flex flex-column align-items-center mt-5">
+  <c-container>
+    <c-row class="justify-content-center">
+      <c-col class="custom-col-xxl-16" md="10" sm="12">
+        <c-card-group class="shadow-0 border-0">
+          <c-card class="p-4 border-0"></c-card>
+        </c-card-group>
+      </c-col>
+    </c-row>
+  </c-container>
+</div>
+
+<div id="header-carousel" class="carousel slide carousel-fade mb-30 mb-lg-0 shadow-lg font-roboto fw-bold"
+  data-bs-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-bs-target="#header-carousel" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#header-carousel" data-bs-slide-to="1"></li>
+    <li data-bs-target="#header-carousel" data-bs-slide-to="2"></li>
+  </ol>
+
+  <!-- Slides -->
+  <div class="carousel-inner">
+    <!-- Slide 1 -->
+    <div class="carousel-item position-relative active" style="height: 730px">
+      <img class="position-absolute w-100 h-100"
+        src="https://africa.unwomen.org/sites/default/files/2022-05/Market%20Woman%20Annet%20Achieng%20at%20Nakawa%20Market%20Sweden%20Supported%20WEE%20Initiative%20through%20IST.JPG"
+        style="object-fit: cover" />
+        <div class="position-absolute carousel-overlay"></div>
+      <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+        <div class="p-3" style="max-width: 700px">
+          <h1 class="hero-text text-white mb-3 animate__animated animate__fadeInDown fw-bold text-white">
+            Equal Opportunity for Women in Business
+          </h1>
+          <h5 class="mx-md-5 px-5 animate__animated animate__bounceIn fw-bold font-roboto text-white">
+            Buy, Sell, and Elevate Your Business through UNWOMEN Market Square
+          </h5>
+          <a class="btn btn-warning py-2 px-4 mt-3 animate__animated animate__fadeInUp " href="#">Shop
+            Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+
+
+
+
+
+    <div class="carousel-item position-relative" style="height: 730px">
+      <img class="position-absolute w-100 h-100"
+        src="https://www.marketlinks.org/sites/default/files/styles/content_heading/public/marketlinks_women_economic_empoerment_resource.jpg?h=56d0ca2e"
+        style="object-fit: cover" />
+        <div class="position-absolute carousel-overlay"></div>
+      <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+        <div class="p-3" style="max-width: 700px">
+          <h1 class="hero-text text-white mb-3 animate__animated animate__fadeInDown fw-bold text-white">
+            Empowering Women Entrepreneurs in Sierra Leone
+          </h1>
+          <h5 class="mx-md-5 px-5 animate__animated animate__bounceIn font-roboto text-white">
+            Unlock Opportunities: Buy, Sell, and Thrive with UNWOMEN Market Square
+          </h5>
+          <a class="btn btn-warning py-2 px-4 mt-3 animate__animated animate__fadeInUp  rounded"
+            href="#">Shop Now</a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- Slide 3 -->
+
+
+    <div class="carousel-item position-relative" style="height: 730px">
+      <img class="position-absolute w-100 h-100" src="../../../../assets//images/homeimage3.jpeg"
+        style="object-fit: cover" />
+        <div class="position-absolute carousel-overlay"></div>
+      <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+        <div class="p-3" style="max-width: 700px">
+          <h1 class="hero-text text-white mb-3 animate__animated animate__fadeInDown fw-bold text-white">
+            Empowering Women-Owned Businesses in Sierra Leone
+          </h1>
+          <h5 class="mx-md-5 px-5 animate__animated animate__bounceIn font-roboto text-white">
+            Discover, Sell, and Elevate Your Business Through UNWOMEN Market Square
+          </h5>
+          <a class="btn btn-warning py-2 px-4 mt-3 animate__animated animate__fadeInUp  rounded"
+            href="#">Shop Now</a>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+<!-- Featured Start -->
+<div class="container-fluid hero-cate-sc pt-5 font-roboto fw-bold justify-content-center align-items-center">
+  <div class="row px-xl-5 pb-3">
+    <div class="col-lg-3 col-md-6 col-sm-12 pb-1 ct-card">
+      <a class="text-decoration-none" [routerLink]="['/business-categories','SME']">
+        <div class="d-flex align-items-center bg-infoo rounded mb-4" style="padding: 30px">
+          <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
+          <h2 class="font-weight-bold m-0">SME</h2>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-12 pb-1 ct-card  justify-content-center align-items-center">
+      <a class="text-decoration-none" [routerLink]="['/business-categories','MACRO']">
+        <div class="d-flex align-items-center mb-4 bg-infoo rounded" style="padding: 30px">
+          <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
+          <h2 class="font-weight-bold m-0">MACRO</h2>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-12 pb-1 ct-card">
+      <a class="text-decoration-none" [routerLink]="['/business-categories','MICRO']">
+        <div class="d-flex align-items-center mb-4 bg-infoo rounded" style="padding: 30px">
+          <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
+          <h2 class="font-weight-bold m-0">MICRO</h2>
+        </div>
+      </a>
+    </div>
+
+
+    <div class="col-lg-3 col-md-6 col-sm-12 pb-1 ct-card justify-content-center">
+      <a class="text-decoration-none" [routerLink]="['/business-categories','SOHO']">
+        <div class="d-flex align-items-center  mb-4 bg-infoo rounded" style="padding: 30px">
+          <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
+          <h2 class="font-weight-bold m-0 text-center">SOHO</h2>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<div class="container-fluid pt-5 font-roboto fw-bold">
+  <h2 class="section-title position-relative mx-xl-5 mb-4">
+    <span class="pr-3 secondary-title">Search by category</span>
+  </h2>
+  <div class="scrolling-wrapper row flex-nowrap mt-4 pb-4 pt-2 overflow-auto">
+    <!-- Repeat this block for each product, up to a maximum of 9 per row -->
+    <div class="ctg-card col-lg-2 col-md-3 col-sm-4 pb-1" *ngFor="let product of products">
+      <a class="text-decoration-none" [routerLink]="['/product-categories', product.category]">
+        <div class="cat-item text-center mb-4">
+          <div>
+            <ng-container [ngSwitch]="product.category">
+              <i *ngSwitchCase="'Food'" style="font-size: 35px;" class="fa fa-cutlery text-dark" aria-hidden="true"></i>
+              <!-- Add more cases for other categories and icons as needed -->
+              <i *ngSwitchCase="'Beauity'" style="font-size: 35px;" class="fa fa-shopping-bag text-dark" aria-hidden="true"></i>
+              <i *ngSwitchCase="'Services'" style="font-size: 35px;" class="fa fa-suitcase text-dark" aria-hidden="true"></i>
+
+              <i *ngSwitchDefault style="font-size: 35px;" class="fa fa-question text-dark" aria-hidden="true"></i> <!-- Default icon for unknown categories -->
+            </ng-container>
+          </div>
+          <h6 class="mt-2" style="color: #646464;">{{ product.category }}</h6>
+        </div>
+      </a>
+    </div>
+    <!-- End of the repeatable block -->
+  </div>
+  
+</div>
+<!-- Products End -->
+
+<!-- Products Start -->
+<div class="container-fluid pt-5 pb-3 font-roboto fw-bold">
+  <!-- <h2 class="section-title position-relative mx-xl-5 mb-4">
+    <span class=" pr-3">Recent Products</span>
+  </h2> -->
+  <div class="row px-xl-5">
+    <!-- <div class="col-lg-3 col-md-4 col-sm-6 pb-1" *ngFor="let product of recentProduct">
+      <div class="product-item bg-light rounded">
+        <div class="product-img position-relative overflow-hidden">
+          <a class="text-decoration-none" [routerLink]="['/product-details', product.uid]" href="">
+            <img class="img-fluid w-100" [src]="product.productImageOne" alt="" style="height: 300px;" />
+            <div class="product-action">
+              <a class="text-decoration-none" class="btn btn-outline-dark ">See Product Details
+              </a>
+            </div>
+          </a>
+        </div>
+        <div class="text-center py-2">
+          <p class="h6 text-decoration-none m-1">{{
+            product.productName
+            }}</p>
+          <div class="d-flex align-items-center justify-content-center mt-2">
+            <h6>{{ "LE " + product.currentPrice }}</h6>
+            <h6 class="text-muted ml-2">
+              <del>{{ "LE " + product.previousPrice }}</del>
+            </h6>
+          </div>
+
+        </div>
+      </div>
+    </div> -->
+
+    <div class="col-lg-3 col-md-4 col-sm-6 m-1" >
+      <div class="product-item rounded p-1">
+        <div class="product-img position-relative overflow-hidden">
+          <a class="text-decoration-none" href="#">
+            <img class="img-fluid w-100" src="https://fdn.gsmarena.com/imgroot/news/23/09/apple-iphone-15-pro-what-to-expect/-822/gsmarena_001.jpg" alt="" />
+            <!-- <div class="product-action">
+              <a class="text-decoration-none" class="btn btn-outline-dark ">See Product Details
+              </a>
+            </div> -->
+          </a>
+        </div>
+        <div class=" p-2">
+          <p class="h6 text-decoration-none m-1 product-title">Iphone for sale</p>
+          <div class="d-flex mt-2 product-price">
+            <h6>Nle 17,000.00</h6>
+           
+          </div>
+            <p class="product-cat">
+              Category: <span class="font-bold">Food</span> 
+            </p>
+            <p class="product-user-lnk">
+              By: <a href="#" class="font-bold">User</a> 
+            </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- Products End -->
+
+
+  <app-footer> </app-footer>

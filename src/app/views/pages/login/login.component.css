@@ -1,0 +1,76 @@
+
+
+
+  .verification-message {
+    color: #fb5d08;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Center the spinner-container */
+  .d-flex.justify-content-center {
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+
+  .font-roboto {
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    font-weight: bold;
+  }
+  
+  
+.login-form-wrap .card{
+  width: 820px;
+  border-radius: 12px;
+  border: 2px solid #009DDC;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.12);
+}
+
+.login-form-wrap .form-logo{
+  width: 150px;
+}
+
+.login-form-wrap .form-title{
+  color: #000;
+text-align: center;
+font-size: 48px;
+font-weight: bold;
+line-height: normal;
+}
+
+.login-form-wrap .form-subtitle{
+  color: #000;
+text-align: center;
+font-size: 28px;
+font-weight: 400;
+line-height: normal;
+}
+
+.login-form-wrap .form-outline{
+  margin: 1.23rem 0;
+}
+.login-form-wrap .form-outline input.form-control {
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #F2F2F2;
+}
+
+.login-form-wrap .form-submit-btn{
+  border-radius: 12px;
+  background: #FFD333;
+  border: none;
+
+}
+
+.txt-primary{
+  color: #009DDC;
+}
+
+.txt-center{
+  text-align: center;
+}
+.txt-sec{
+  color:#FFD333;
+}

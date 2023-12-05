@@ -1,0 +1,284 @@
+<app-navbar> </app-navbar>
+
+<div class="bg-light d-flex flex-column align-items-center mt-5">
+  <c-container>
+    <c-row class="justify-content-center">
+      <c-col class="custom-col-xxl-16" md="10" sm="12">
+        <c-card-group class="shadow-0 border-0">
+          <c-card class="p-4 border-0"></c-card>
+        </c-card-group>
+      </c-col>
+    </c-row>
+  </c-container>
+</div>
+
+<!-- Shop Start -->
+<div class="container-fluid font-roboto fw-bold">
+  <div class="row px-xl-5">
+    <!-- Shop Sidebar Start -->
+    <div class="col-lg-3 col-md-4">
+      <!-- Price Start -->
+      <h5 class="section-title position-relative text-uppercase mb-3 mt-5">
+        <span class="bg-secondary pr-3">Filter by price</span>
+      </h5>
+      <div class="bg-light p-4 mb-30">
+        <form>
+          <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+            <input type="checkbox" class="custom-control-input" checked id="price-all" />
+            <label class="custom-control-label" for="price-all">All Price</label>
+            <span class="badge border font-weight-normal">1000</span>
+          </div>
+          <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+            <input type="checkbox" class="custom-control-input" id="price-1" />
+            <label class="custom-control-label" for="price-1">LE 0 - LE 100</label>
+            <span class="badge border font-weight-normal">150</span>
+          </div>
+          <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+            <input type="checkbox" class="custom-control-input" id="price-2" />
+            <label class="custom-control-label" for="price-2">LE 100 - LE 200</label>
+            <span class="badge border font-weight-normal">295</span>
+          </div>
+          <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+            <input type="checkbox" class="custom-control-input" id="price-3" />
+            <label class="custom-control-label" for="price-3">LE 200 - LE 300</label>
+            <span class="badge border font-weight-normal">246</span>
+          </div>
+          <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+            <input type="checkbox" class="custom-control-input" id="price-4" />
+            <label class="custom-control-label" for="price-4">LE 300 - LE 400</label>
+            <span class="badge border font-weight-normal">145</span>
+          </div>
+          <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
+            <input type="checkbox" class="custom-control-input" id="price-5" />
+            <label class="custom-control-label" for="price-5">LE 400 - LE 500</label>
+            <span class="badge border font-weight-normal">168</span>
+          </div>
+        </form>
+      </div>
+      <!-- Price End -->
+
+      <!-- Color Start -->
+      <h5 class="section-title position-relative text-uppercase mb-3">
+        <span class="bg-secondary pr-3">Filter by color</span>
+      </h5>
+      <div class="bg-light p-4 mb-30">
+        <form>
+          <div class="row">
+            <div class="custom-control col col-lg-3 col-md-4 col-sm-6 custom-checkbox d-flex align-items-center justify-content-between colors mb-3">
+              <!-- <input type="checkbox" class="custom-control-input" checked id="color-all" /> -->
+              <button class="badge border font-weight-normal green"></button>
+            </div>
+            <div class="custom-control col col-lg-3 col-md-4 col-sm-6 custom-checkbox d-flex align-items-center justify-content-between colors mb-3">
+              <!-- <input type="checkbox" class="custom-control-input" id="color-1" /> -->
+              <button class="badge border font-weight-normal red"></button>
+            </div>
+            <div class="custom-control col col-lg-3 col-md-4 col-sm-6 custom-checkbox d-flex align-items-center justify-content-between colors mb-3">
+              <!-- <input type="checkbox" class="custom-control-input" id="color-2" /> -->
+              <button class="badge border font-weight-normal blue"></button>
+            </div>
+            <div class="custom-control col col-lg-3 col-md-4 col-sm-6 custom-checkbox d-flex align-items-center justify-content-between colors mb-3">
+              <!-- <input type="checkbox" class="custom-control-input" id="color-3" /> -->
+              <button class="badge border font-weight-normal yellow"></button>
+            </div>
+            <div class="custom-control col col-lg-3 col-md-4 col-sm-6 custom-checkbox d-flex align-items-center justify-content-between colors mb-3">
+              <input type="checkbox" class="custom-control-input" id="color-4" />
+              <!-- <label class="custom-control-label" for="color-4">Blue</label> -->
+              <button class="badge border font-weight-normal white"></button>
+            </div>
+            <div class="custom-control col col-lg-3 col-md-4 col-sm-6 custom-checkbox d-flex align-items-center justify-content-between colors">
+              <!-- <input type="checkbox" class="custom-control-input" id="color-5" /> -->
+              <button class="badge border font-weight-normal black"></button>
+            </div>
+
+            <div class="custom-control col col-lg-3 col-md-4 col-sm-6 custom-checkbox d-flex align-items-center justify-content-between colors">
+              <!-- <input type="checkbox" class="custom-control-input" id="color-5" /> -->
+              <button class="badge border font-weight-normal gray"></button>
+            </div>
+
+            <div class="custom-control col col-lg-3 col-md-4 col-sm-6 custom-checkbox d-flex align-items-center justify-content-between colors">
+              <!-- <input type="checkbox" class="custom-control-input" id="color-5" /> -->
+              <button class="badge border font-weight-normal purple"></button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- Color End -->
+
+      <!-- Size Start -->
+      <h5 class="section-title position-relative text-uppercase mb-3">
+        <span class="bg-secondary pr-3">Filter by size</span>
+      </h5>
+      <div class="bg-light p-4 mb-30">
+        <form>
+          <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+            <input type="checkbox" class="custom-control-input" checked id="size-all" />
+            <label class="custom-control-label" for="size-all">All Size</label>
+            <span class="badge border font-weight-normal">1000</span>
+          </div>
+          <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+            <input type="checkbox" class="custom-control-input" id="size-1" />
+            <label class="custom-control-label" for="size-1">XS</label>
+            <span class="badge border font-weight-normal">150</span>
+          </div>
+          <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+            <input type="checkbox" class="custom-control-input" id="size-2" />
+            <label class="custom-control-label" for="size-2">S</label>
+            <span class="badge border font-weight-normal">295</span>
+          </div>
+          <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+            <input type="checkbox" class="custom-control-input" id="size-3" />
+            <label class="custom-control-label" for="size-3">M</label>
+            <span class="badge border font-weight-normal">246</span>
+          </div>
+          <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+            <input type="checkbox" class="custom-control-input" id="size-4" />
+            <label class="custom-control-label" for="size-4">L</label>
+            <span class="badge border font-weight-normal">145</span>
+          </div>
+          <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
+            <input type="checkbox" class="custom-control-input" id="size-5" />
+            <label class="custom-control-label" for="size-5">XL</label>
+            <span class="badge border font-weight-normal">168</span>
+          </div>
+        </form>
+      </div>
+      <!-- Size End -->
+    </div>
+    <!-- Shop Sidebar End -->
+
+    <!-- Shop Product Start -->
+    <div class="col-lg-9 col-md-8 mt-4">
+      <div class="row pb-3">
+        <div class="col-12 pb-1">
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <div>
+              <button class="btn btn-sm btn-light list-view-btn" [class.active]="currentProductView === 'grid'" (click)="setProductView('grid')">
+                <i class="fa fa-th-large"></i>
+              </button>
+              <button class="btn btn-sm btn-light ml-2 grid-view-btn" [class.active]="currentProductView === 'list'" (click)="setProductView('list')">
+                <i class="fa fa-bars"></i>
+              </button>
+            </div>
+            <div class="ml-2">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
+                  Sorting
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#">Latest</a>
+                  <a class="dropdown-item" href="#">Popularity</a>
+                  <a class="dropdown-item" href="#">Best Rating</a>
+                </div>
+              </div>
+              <div class="btn-group ml-2">
+                <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
+                  Showing
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#">10</a>
+                  <a class="dropdown-item" href="#">20</a>
+                  <a class="dropdown-item" href="#">30</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Products Start -->
+        <div class="container-fluid py-3 font-roboto fw-bold">
+          <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
+            <span class="">All Products</span>
+          </h2>
+          <div class="row px-xl-2 " *ngIf="currentProductView === 'grid'; else listView">
+            <div class="col-lg-4 col-md-6 col-sm-6 pb-1" *ngFor="let product of products">
+
+              <div class="product-item rounded p-1">
+                <div class="product-img position-relative overflow-hidden">
+                  <a class="text-decoration-none" [routerLink]="['/product-details', product.uuid]">
+                    <img class="img-fluid w-100" [src]="product?.ProductImages[0]?.productImageOne" alt="" />
+                    <div class="product-action">
+                      <a class="text-decoration-none" class="btn btn-outline-dark ">See Product Details
+                      </a>
+                    </div> 
+                  </a>
+                </div>
+                <div class=" p-2">
+                  <p class="h6 text-decoration-none m-1 product-title">{{
+                    product.productName
+                    }}</p>
+                  <div class="d-flex mt-2 product-price">
+                    <h6>{{ "Nle " + product.currentPrice }}</h6>
+                   
+                  </div>
+                    <p class="product-cat" style="margin-bottom: 5px;">
+                      Category: <span class="font-bold">Food</span> 
+                    </p>
+                    <p class="product-user-lnk">
+                      By: <a href="#" class="font-bold">User</a> 
+                    </p>
+                </div>
+              </div>
+
+            </div> 
+          </div>
+            <ng-template #listView>
+            <div class="row px-xl-2 ">
+            <div class="col-lg-12 col-md-12 col-sm-12 linear-product-item" *ngFor="let product of products">
+              <div class="row">
+                <div class="col-12 col-md-4">
+                  <a [routerLink]="['/product-details', product.uuid]" >
+                      <img [src]="product?.ProductImages[0]?.productImageOne" class="img-fluid product-img" alt="placeholder">
+                  </a>
+              </div>
+              <div class="col-12 col-md-8 d-flex flex-column justify-content-center">
+                  <a href="#"><h4>{{ product.productName }}<span class="txt-primary"><sup>{{ "Nle " +product. currentPrice}}</sup></span></h4></a>
+                  <p class="text-muted small">Category : <span class="mr-2 txt-primary">{{product.category}}</span>, Location : <span class="mr-2 txt-primary">Sierra Leone</span>, Posted on : <span class="mr-2 txt-primary">{{product.DateCreated}}</span></p>
+                  <p class="short-desc text-justify">
+                    {{product.discription}}
+                  </p>
+                  <div class="seller">
+                      <a href="#" class="d-inline d-flex flex-row align-items-center">
+                          <img src="http://via.placeholder.com/30" class="img-fluid rounded-circle">
+                          <p class="m-0 p-0 ml-2">{{product.CreatedBy}}
+                          </p>
+                      </a>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+          </ng-template>
+
+        </div>
+        <!-- Products End -->
+
+        <div class="col-12">
+          <nav>
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="#"><i class="fa fa-long-arrow-left"></i></a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#"><i class="fa fa-long-arrow-right"></i></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- Shop Product End -->
+  </div>
+</div>
+<!-- Shop End -->
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+
+<!-- Footer -->
+<app-footer> </app-footer>
