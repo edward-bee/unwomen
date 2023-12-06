@@ -156,7 +156,7 @@
             <ng-container [ngSwitch]="product.category">
               <i *ngSwitchCase="'Food'" style="font-size: 35px;" class="fa fa-cutlery text-dark" aria-hidden="true"></i>
               <!-- Add more cases for other categories and icons as needed -->
-              <i *ngSwitchCase="'Beauity'" style="font-size: 35px;" class="fa fa-shopping-bag text-dark" aria-hidden="true"></i>
+              <i *ngSwitchCase="'Beauty'" style="font-size: 35px;" class="fa fa-shopping-bag text-dark" aria-hidden="true"></i>
               <i *ngSwitchCase="'Services'" style="font-size: 35px;" class="fa fa-suitcase text-dark" aria-hidden="true"></i>
 
               <i *ngSwitchDefault style="font-size: 35px;" class="fa fa-question text-dark" aria-hidden="true"></i> <!-- Default icon for unknown categories -->
@@ -178,37 +178,12 @@
     <span class=" pr-3">Recent Products</span>
   </h2> -->
   <div class="row px-xl-5">
-    <!-- <div class="col-lg-3 col-md-4 col-sm-6 pb-1" *ngFor="let product of recentProduct">
-      <div class="product-item bg-light rounded">
-        <div class="product-img position-relative overflow-hidden">
-          <a class="text-decoration-none" [routerLink]="['/product-details', product.uid]" href="">
-            <img class="img-fluid w-100" [src]="product.productImageOne" alt="" style="height: 300px;" />
-            <div class="product-action">
-              <a class="text-decoration-none" class="btn btn-outline-dark ">See Product Details
-              </a>
-            </div>
-          </a>
-        </div>
-        <div class="text-center py-2">
-          <p class="h6 text-decoration-none m-1">{{
-            product.productName
-            }}</p>
-          <div class="d-flex align-items-center justify-content-center mt-2">
-            <h6>{{ "LE " + product.currentPrice }}</h6>
-            <h6 class="text-muted ml-2">
-              <del>{{ "LE " + product.previousPrice }}</del>
-            </h6>
-          </div>
-
-        </div>
-      </div>
-    </div> -->
-
-    <div class="col-lg-3 col-md-4 col-sm-6 m-1" >
+    
+    <div class="col-lg-3 col-md-4 col-sm-6 m-1" *ngFor="let product of recentProduct">
       <div class="product-item rounded p-1">
         <div class="product-img position-relative overflow-hidden">
-          <a class="text-decoration-none" href="#">
-            <img class="img-fluid w-100" src="https://fdn.gsmarena.com/imgroot/news/23/09/apple-iphone-15-pro-what-to-expect/-822/gsmarena_001.jpg" alt="" />
+          <a class="text-decoration-none" [routerLink]="['/product-details', product.uid]" href="#">
+            <img class="img-fluid w-100" [src]="product.productImageOne" alt="" />
             <!-- <div class="product-action">
               <a class="text-decoration-none" class="btn btn-outline-dark ">See Product Details
               </a>
@@ -216,16 +191,18 @@
           </a>
         </div>
         <div class=" p-2">
-          <p class="h6 text-decoration-none m-1 product-title">Iphone for sale</p>
+          <p class="h6 text-decoration-none m-1 product-title">{{
+            product.productName
+            }}</p>
           <div class="d-flex mt-2 product-price">
-            <h6>Nle 17,000.00</h6>
+            <h6>{{ "Nle " + product.previousPrice + ".00"}}</h6>
            
           </div>
             <p class="product-cat">
-              Category: <span class="font-bold">Food</span> 
+              Category: <span class="font-bold">{{product.category}}</span> 
             </p>
             <p class="product-user-lnk">
-              By: <a href="#" class="font-bold">User</a> 
+              By: <a href="#" class="font-bold">{{product.CreatedBy}}</a> 
             </p>
         </div>
       </div>

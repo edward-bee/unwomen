@@ -21,7 +21,7 @@
     </h2>
     <div class="row px-xl-5">
         <div class="col-lg-3 col-md-4 col-sm-6 pb-1" *ngFor="let product of productCategories">
-            <div class="product-item bg-light mb-4">
+            <div class="product-item rounded p-1">
                 <div class="product-img position-relative overflow-hidden">
                     <a class="text-decoration-none" [routerLink]="['/product-details', product.uuid]" href="">
                         <img class="img-fluid w-100" [src]="getFirstProductImage(product)" alt=""
@@ -33,10 +33,10 @@
                     </a>
                 </div>
                 <div class="text-center py-4">
-                    <p class="h6 text-decoration-none">{{
+                    <p class="h6 text-decoration-none m-1 product-title">{{
                         product.productName
                         }}</p>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
+                    <div class="d-flex mt-2 product-price">
                         <h6>{{ "LE" + product.currentPrice }}</h6>
                         <h6 class="text-muted ml-2">
                             <del>{{ "LE" + product.previousPrice }}</del>

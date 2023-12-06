@@ -18,7 +18,7 @@ interface ProductCategory {
 @Component({
   selector: 'app-productcategories',
   templateUrl: './productcategories.component.html',
-  styleUrls:[ '../homepage/homepage.component.css']
+  styleUrls:[ '../business/business.component.css']
 })
 export class ProductcategoriesComponent implements OnInit, OnDestroy {
   category!: string;
